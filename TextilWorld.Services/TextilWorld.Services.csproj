@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TextilWorld.Core\TextilWorld.Core.csproj" />
+    <ProjectReference Include="..\TextilWorld.Models\TextilWorld.Models.csproj" />
+  </ItemGroup>
+
+</Project>
