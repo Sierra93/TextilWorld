@@ -1,35 +1,18 @@
 ﻿
 @{
-	ViewData["Title"] = "Start";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h1>Start</h1>
-@model IEnumerable<TextilWorld.Models.Category>
-@foreach (var item in Model) {
-	<div id="idImages" class="col-lg-12 col-xs-12">
-		<img class="img-thumbnail imgFromBack" src="@Url.Content(item.ImagePath.Replace("wwwroot", "~"))" /> <br />
-		@*<div class="fullName"> @item.FullName  <br /> </div>*@
-		@*<span id="idLinkSite" class="photobox__label"> <a href="@item.LinkSite" id="idLinkSite"> @item.LinkSite </a> </span>*@
-		@*<div class="block details-text col-lg-12 col-xs-12">
-			<form asp-action="GetDetails" method="post" enctype="multipart/form-data" asp-controller="Details">*@
-				@*<div class="form-group">
-					<input type="text" name="id" class="hidden" value="@item.Id" />
-				</div>*@
-				@*<p id="idTitle">@item.Title</p>
-				<p id="idTitle"><span class="title-task">Задача:</span><br />@item.CommentTask</p>
-				<p id="idTitle"><span class="title-task">Описание:</span><br />@item.CommentDetails</p>*@
-				@* Переходим на страницу подробностей о выбранной работе *@
-				@*<div class="btnDetails">*@
-					@*<a href="@Url.Action("GetDetails", "Details")" type="button" id="idSignIn" class="btn fancy btn-1 btn-sm btn-details text-center" onclick="onPressBtnDetails()">
-							Подробнее
-							@Html.ActionLink("Подробнее", "GetDetails", "Details")
-						</a>*@
-					@*<div id="idBtnDetails" class="form-group">
-						<input type="submit" value="Подробнее" class="btn fancy btn-1 btn-sm btn-details text-center" />
-					</div>*@
-				@*</div>*@
-			@*</form>
-		</div>*@
-	</div>
-}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Продажа текстиля</title>
+</head>
+<body>
+	<h1>Главная страница.</h1>
+	<!-- Выгрузка категорий товаров. -->
+	@*@model IEnumerable<TextilWorld.Models.Category>
+	@foreach (var item in Model) {
+		
+	}*@
+</body>
+</html>

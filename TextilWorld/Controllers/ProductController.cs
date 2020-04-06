@@ -30,16 +30,6 @@ namespace TextilWorld.Controllers {
         }
 
         /// <summary>
-        /// Метод возвращает категории товаров.
-        /// </summary>
-        /// <returns>Список категорий.</returns>
-        [HttpGet]
-        public async Task<IActionResult> GetCategoryProduct() {
-            var data = FetchImageFromDB();
-            return View();
-        }
-
-        /// <summary>
         /// Метод получает список категорий товаров.
         /// </summary>
         /// <returns>Список категорий.</returns>
