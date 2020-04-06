@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace TextilWorld.Services {
-    public class Class1 {
+    class Class1 {
     }
 }
