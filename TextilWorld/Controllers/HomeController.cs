@@ -8,6 +8,9 @@ using Microsoft.Extensions.Logging;
 using TextilWorld.Models;
 
 namespace TextilWorld.Controllers {
+    /// <summary>
+    /// Контроллер описывает все роуты приложения.
+    /// </summary>
     public class HomeController : Controller {        
         public IActionResult Index() {
             return View();
