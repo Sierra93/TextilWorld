@@ -2,3 +2,109 @@
   margin: 0;
   padding: 0;
 }
+body {
+  font: 13px/20px Ubuntu, Arial, Helvetica, sans-serif !important;
+}
+body p {
+  color: #888;
+}
+body ul li {
+  color: #888;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 100px;
+}
+li {
+  list-style-type: none;
+}
+.block-preim {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.content-before-categories {
+  max-width: 1162px;
+  margin: 0 auto;
+}
+.content-before-categories ul li::before {
+  color: #d54fba;
+}
+.content-before-categories ul li:before {
+  content: "\25CF";
+}
+.item {
+  display: flex;
+  align-items: center;
+}
+.item .title {
+  margin-left: 5px;
+}
+.details-text {
+  text-align: center;
+}
+.block {
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  display: none;
+}
+.block > p {
+  max-width: 100%;
+}
+.block > #idTitle {
+  font-family: 'Open Sans', sans-serif, Arial;
+  font-size: 10px;
+  padding-bottom: 10px;
+  line-height: 15px;
+  margin: 0px 0 -15px;
+}
+#idTitle {
+  text-align: left;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  white-space: nowrap;
+  padding: 3px 0 5px;
+}
+#idImages {
+  margin-bottom: 10px;
+  position: relative;
+  width: 300px;
+  margin-left: -40px;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+#idImages:hover {
+  cursor: pointer;
+}
+#idImages:hover img {
+  transform: scale(1.1);
+  overflow-x: hidden;
+}
+.imgFromBack {
+  transition: 0.5s;
+}
+#idImages .block {
+  display: block;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+#idPortfolio {
+  margin-left: 7%;
+  margin-right: 7%;
+}
+.form {
+  background: #d757b5;
+  width: max-content;
+}
+.tll {
+  padding: 0px 33px 0px 20px;
+}
+.hidden {
+  display: none;
+}

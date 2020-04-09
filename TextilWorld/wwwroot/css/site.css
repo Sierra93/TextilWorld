@@ -8,9 +8,9 @@ a.navbar-brand {
 }
 
 /* Provide sufficient contrast against white background */
-a {
+/*a {
   color: #0366d6;
-}
+}*/
 
 .btn-primary {
   color: #fff;
@@ -27,7 +27,7 @@ a {
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+  /*font-size: 14px;*/
 }
 @media (min-width: 768px) {
   html {
@@ -35,16 +35,16 @@ html {
   }
 }
 
-.border-top {
+/*.border-top {
   border-top: 1px solid #e5e5e5;
-}
+}*/
 .border-bottom {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.box-shadow {
+/*.box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
+}*/
 
 button.accept-policy {
   font-size: 1rem;
@@ -58,14 +58,11 @@ html {
   min-height: 100%;
 }
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+  margin-top: 100px;
+  /*white-space: nowrap;*/
+  /*line-height: 60px;*/ /* Vertically center the text there */
 }

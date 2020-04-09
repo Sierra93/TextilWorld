@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextilWorld", "TextilWorld\TextilWorld.csproj", "{7563863B-5D83-45A3-9A24-CE3306739344}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextilWorld", "TextilWorld\TextilWorld.csproj", "{7563863B-5D83-45A3-9A24-CE3306739344}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextilWorld.Models", "TextilWorld.Models\TextilWorld.Models.csproj", "{E6ACF835-C01E-4455-A359-79D4689B4ACB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextilWorld.Models", "TextilWorld.Models\TextilWorld.Models.csproj", "{E6ACF835-C01E-4455-A359-79D4689B4ACB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextilWorld.Core", "TextilWorld.Core\TextilWorld.Core.csproj", "{E21DF4A3-DDFC-4F14-B754-7B65D94FDA35}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextilWorld.Services", "TextilWorld.Services\TextilWorld.Services.csproj", "{D940AFBA-47F6-4A6B-8A14-0C78D6C0DC2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextilWorld.Services", "TextilWorld.Services\TextilWorld.Services.csproj", "{23F92010-F067-4473-819A-4863B630F8BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextilWorld.Core", "TextilWorld.Core\TextilWorld.Core.csproj", "{04228920-82BA-4634-AAEE-338B133C73DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{E6ACF835-C01E-4455-A359-79D4689B4ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6ACF835-C01E-4455-A359-79D4689B4ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6ACF835-C01E-4455-A359-79D4689B4ACB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E21DF4A3-DDFC-4F14-B754-7B65D94FDA35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E21DF4A3-DDFC-4F14-B754-7B65D94FDA35}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E21DF4A3-DDFC-4F14-B754-7B65D94FDA35}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E21DF4A3-DDFC-4F14-B754-7B65D94FDA35}.Release|Any CPU.Build.0 = Release|Any CPU
-		{23F92010-F067-4473-819A-4863B630F8BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23F92010-F067-4473-819A-4863B630F8BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23F92010-F067-4473-819A-4863B630F8BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23F92010-F067-4473-819A-4863B630F8BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D940AFBA-47F6-4A6B-8A14-0C78D6C0DC2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D940AFBA-47F6-4A6B-8A14-0C78D6C0DC2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D940AFBA-47F6-4A6B-8A14-0C78D6C0DC2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D940AFBA-47F6-4A6B-8A14-0C78D6C0DC2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04228920-82BA-4634-AAEE-338B133C73DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04228920-82BA-4634-AAEE-338B133C73DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04228920-82BA-4634-AAEE-338B133C73DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04228920-82BA-4634-AAEE-338B133C73DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

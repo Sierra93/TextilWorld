@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace TextilWorld.Data {
+namespace TextilWorld.Core {
     /// <summary>
     /// Класс описывает строку подключения.
     /// </summary>

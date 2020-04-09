@@ -1,0 +1,42 @@
+﻿
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Продажа текстиля</title>
+	<link href="~/css/HeaderStyles.css" rel="stylesheet" />
+	<link href="~/css/MainStyles.css" rel="stylesheet" />
+	<link href="~/css/FooterStyles.css" rel="stylesheet" />
+	<script src="~/lib/jquery/dist/jquery.js"></script>
+	<!-- Подключение фреймворка Vue -->
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+	<!-- Выгрузка категорий товаров. -->
+	<div id="idPortfolio" class="col-lg-12 col-xs-12">
+		<div class="content">
+			@model IEnumerable<TextilWorld.Models.CategoryDetails>
+			@foreach (var item in Model) {
+				<div id="idImages" class="col-lg-3 col-xs-12">
+					<a href="@Url.Action("GetImageConcreteCategory", "Product", new { item.Id })">
+						<img class="grow imgFromBack" src="@Url.Content(item.ImagePath.Replace("wwwroot", "~"))" /> <br />
+					</a>
+					<div class="block details-text col-lg-3 col-xs-12">
+						<form class="form">
+							<div class="form-group hidden">
+								<input type="text" name="id" value="@item.Id" />
+							</div>
+							<div class="tll">
+								<p id="idTitle">@item.Name</p>
+							</div>
+						</form>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</body>
+</html>

@@ -27,12 +27,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TextilWorld.Core\TextilWorld.Core.csproj" />
     <ProjectReference Include="..\TextilWorld.Models\TextilWorld.Models.csproj" />
     <ProjectReference Include="..\TextilWorld.Services\TextilWorld.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\images\categories\" />
+    <Folder Include="wwwroot\images\icons\" />
   </ItemGroup>
 
   <ItemGroup>

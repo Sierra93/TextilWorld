@@ -7,7 +7,7 @@ using TextilWorld.Models;
 using TextilWorld.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
-using Microsoft.Extensions.Configuration;
+using TextilWorld.Services;
 
 namespace TextilWorld.Controllers {
     /// <summary>
@@ -25,34 +25,20 @@ namespace TextilWorld.Controllers {
         /// <returns></returns>
         [HttpGet]
         public IActionResult Start() {
-            var data = FetchImageFromDB();
-            return View(data);
-        }
+            // Получает категории товаров.
+            var OData = Services.GetImageCategories.FetchImageFromDB();
+            return View(OData);
+        }        
 
         /// <summary>
-        /// Метод получает список категорий товаров.
+        /// Метод получает товары выбранной категории.
         /// </summary>
-        /// <returns>Список категорий.</returns>
-        private List<Category> FetchImageFromDB() {
-            List<Category> categories = new List<Category>();
-            using (var con = new SqlConnection(Connection.GetConnectionString())) {
-                con.Open();
-                using (var com = new SqlCommand("SELECT Id, Title, ImagePath, IdGroup FROM Categoryes", con)) {
-                    using (var reader = com.ExecuteReader()) {
-                        if (reader.HasRows) {
-                            while (reader.Read()) {
-                                categories.Add(new Category {
-                                    Id = Convert.ToInt32(reader["Id"]),
-                                    Title = reader["Title"].ToString(),
-                                    ImagePath = reader["ImagePath"].ToString(),
-                                    IdGroup = Convert.ToInt32(reader["IdGroup"])
-                                });
-                            }
-                        }
-                    }
-                }
-            }
-            return categories;
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public IActionResult GetImageConcreteCategory(string id) {
+            var oData = Services.GetImageConcreteCategory.GetImagesConcrete(id); 
+            return View(oData);
         }
     }
 }
