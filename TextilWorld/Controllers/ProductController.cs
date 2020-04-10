@@ -26,7 +26,7 @@ namespace TextilWorld.Controllers {
         [HttpGet]
         public IActionResult Start() {
             // Получает категории товаров.
-            var OData = Services.GetImageCategories.FetchImageFromDB();
+            var OData = GetImageCategoriesService.FetchImageFromDB();
             return View(OData);
         }        
 
@@ -37,8 +37,24 @@ namespace TextilWorld.Controllers {
         /// <returns></returns>
         [HttpGet]
         public IActionResult GetImageConcreteCategory(string id) {
-            var oData = Services.GetImageConcreteCategory.GetImagesConcrete(id); 
+            var oData = GetImageConcreteCategoryService.GetImagesConcrete(id); 
             return View(oData);
+        }
+
+        /// <summary>
+        /// Метод добавляет товар в корзину и переходит в корзину.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public IActionResult AddProductToShop(int id) {
+            if (id == 0) {
+                var data = db.CategoryesDetails.Where(p => p.isShop == "1");
+                return View(data);
+            }
+            var changeProduct = db.CategoryesDetails.FirstOrDefault(l => l.Id == id);
+            changeProduct.isShop = "1";
+            db.SaveChangesAsync();
+            return View(changeProduct);
         }
     }
 }

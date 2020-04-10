@@ -4,17 +4,18 @@ using System.Collections.Generic;
 using System.Text;
 using TextilWorld.Models;
 using TextilWorld.Core;
+using System.Threading.Tasks;
 
 namespace TextilWorld.Services {
     /// <summary>
     /// Сервис получает категории изображений из БД.
     /// </summary>
-    public class GetImageCategories {
+    public class GetImageCategoriesService {
         /// <summary>
         /// Метод получает список категорий товаров.
         /// </summary>
         /// <returns>Список категорий.</returns>
-        public static List<Category> FetchImageFromDB() {
+        public static List <Category> FetchImageFromDB() {
             List<Category> categories = new List<Category>();
             using (var con = new SqlConnection(Connection.GetConnectionString())) {
                 con.Open();

@@ -1,11 +1,13 @@
 ﻿
 @{
+	ViewData["Title"] = "AddProductToShop";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>Продажа текстиля</title>
+	<title>Корзина</title>
 	<link href="~/css/HeaderStyles.css" rel="stylesheet" />
 	<link href="~/css/MainStyles.css" rel="stylesheet" />
 	<link href="~/css/FooterStyles.css" rel="stylesheet" />
@@ -18,14 +20,11 @@
 	<!-- Выгрузка категорий товаров. -->
 	<div id="idPortfolioDop" class="col-lg-12 col-xs-12">
 		<div class="content">
-			@model IEnumerable<TextilWorld.Models.CategoryDetails>
-			@foreach (var item in Model) {
-				<div class="col-lg-12 block-title-category mt-2 mb-2">
-					<h1 class="title-category">@item.Name</h1>
-				</div>
-				break;
-			}
+			<div class="col-lg-12 block-title-category mt-2 mb-2">
+				<h1 class="title-category">Корзина</h1>
+			</div>
 
+			@model IEnumerable<TextilWorld.Models.CategoryDetails>
 			@foreach (var item in Model) {
 				<div id="idImagesNotEffect" class="col-lg-3 col-xs-12">
 					<div class="block-images">
@@ -34,25 +33,6 @@
 						<div class="details-text">
 							@item.Details
 						</div>
-
-						<div id="id-details-block" class="btnDetails mt-2">
-							<div class="form-group hidden">
-								<input type="text" name="id" value="@item.Id" />
-							</div>
-
-							<div class="count-product">
-								<span class="minus">-</span>
-
-								<input type="text" class="text" name="quantity" value="1" />
-
-								<span class="plus">+</span>
-							</div>
-						<form asp-action="AddProductToShop" asp-controller="Product" asp-route-id="@item.Id">
-							<div id="idBtnDetails" class="form-group">
-								<input id="id-details" type="submit" value="В корзину" class="btn fancy btn-1 btn-sm btn-details text-center" />
-							</div>
-						</form>
-						</div>
 					</div>
 				</div>
 			}
@@ -60,3 +40,4 @@
 	</div>
 </body>
 </html>
+

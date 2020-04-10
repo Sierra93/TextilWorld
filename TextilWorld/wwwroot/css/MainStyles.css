@@ -84,6 +84,15 @@ li {
   transform: scale(1.1);
   overflow-x: hidden;
 }
+#idImagesNotEffect {
+  position: relative;
+  width: 300px;
+  margin-left: -40px;
+  height: 340px;
+}
+#idImagesNotEffect:hover {
+  transition: box-shadow ease-out 0.2s;
+}
 .imgFromBack {
   transition: 0.5s;
 }
@@ -98,6 +107,10 @@ li {
   margin-left: 7%;
   margin-right: 7%;
 }
+#idPortfolioDop {
+  margin-left: 13%;
+  margin-right: 13%;
+}
 .form {
   background: #d757b5;
   width: max-content;
@@ -107,4 +120,109 @@ li {
 }
 .hidden {
   display: none;
+}
+.min-width-img {
+  width: 180px;
+  height: 170px;
+}
+.title-category {
+  font-weight: 600;
+  font-size: 36px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.block-title-category {
+  margin-left: -3%;
+  padding-right: 20%;
+}
+.details-text {
+  width: 180px;
+}
+.block-images {
+  color: #d346ad;
+  transition: 0.2s;
+  width: 180px;
+}
+.block-images:hover {
+  color: black;
+  width: 180px;
+  box-shadow: 0 0 8px 2px #888;
+}
+.shop {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+#idBtnDetails {
+  color: #FFF;
+  background: #d757b5;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+}
+#idBtnDetails .btnDetails {
+  text-align: center;
+  color: #FFF;
+  font-size: 10px;
+  height: 18px;
+  align-items: center;
+}
+#idBtnDetails #id-details {
+  color: #FFF;
+  text-transform: uppercase;
+}
+#idBtnDetails #id-details:hover {
+  background: #bf93b2;
+}
+#id-details-block {
+  display: none;
+  justify-content: space-around;
+}
+.block-images:hover #id-details-block {
+  display: flex;
+  justify-content: space-around;
+}
+.text {
+  width: 19px;
+  border: 0px;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  background: #f7f7f7;
+  color: #373737;
+  font-size: 10px;
+  height: 26px;
+  border-radius: 0px;
+  text-align: center;
+  line-height: 13px;
+}
+.count-product {
+  display: flex;
+}
+.btn-details {
+  font-size: 10px;
+}
+.plus {
+  line-height: 22px;
+  height: 26px;
+  width: 21px;
+  cursor: pointer;
+  color: gray;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: center;
+}
+.plus:hover {
+  background: #e3e3e3;
+}
+.minus {
+  line-height: 22px;
+  height: 26px;
+  width: 21px;
+  cursor: pointer;
+  color: gray;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: center;
+}
+.minus:hover {
+  background: #e3e3e3;
 }

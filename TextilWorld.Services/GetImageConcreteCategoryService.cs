@@ -10,8 +10,8 @@ namespace TextilWorld.Services {
     /// <summary>
     /// Сервис получает из БЖ изображения выбранной категории товаров.
     /// </summary>
-    /// <returns>Список товаров выбранной категории.</returns>
-    public class GetImageConcreteCategory {
+    /// <returns>Список товаров выбранной категории.</returns> 
+    public class GetImageConcreteCategoryService {
         public static List<CategoryDetails> GetImagesConcrete(string id) { 
             List<CategoryDetails> categoriesDetails = new List<CategoryDetails>();
             using (var con = new SqlConnection(Connection.GetConnectionString())) {
