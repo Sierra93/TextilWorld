@@ -15,6 +15,7 @@ namespace TextilWorld.Models {
         public int IdGroup { get; set; }    // Номер группы.
         public string Details { get; set; } // Детальное описание товара.
         public string isShop { get; set; }    // Находится товар в корзине или нет. 1 - да, 0 - нет.
+        public string isFavorites { get; set; } // Находится ли товар в избранном. 
         public List<MultepleContextTable> MultepleContextTables { get; set; }
         public CategoryDetails() { 
             MultepleContextTables = new List<MultepleContextTable>();

@@ -79,5 +79,24 @@ namespace TextilWorld.Controllers {
             var collectionSearch = db.CategoryesDetails.Where(p => p.Details.Contains(search)).ToList();
             return View(collectionSearch);
         }
+
+        /// <summary>
+        /// Метод добавляет товар в избранное.
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult AddProductToFavorites(int id) {
+            CategoryDetails categoryDetails = new CategoryDetails();
+            // Получает список товаров, которые находятся в избранном.
+            if (id == 0) {
+                var listFavorites = db.CategoryesDetails.Where(p => p.isFavorites == "1").ToList();
+                return View(listFavorites);
+            }
+
+            // Добавляет товар в избранное.
+            var aFavorites = db.CategoryesDetails.Where(p => p.Id == id).ToList();
+            categoryDetails.isFavorites = "1";
+            db.SaveChanges();
+            return View();
+        }
     }
 }
