@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>Корзина</title>
+	<title>Подробнее о товаре</title>
 	<link href="~/css/HeaderStyles.css" rel="stylesheet" />
 	<link href="~/css/MainStyles.css" rel="stylesheet" />
 	<link href="~/css/FooterStyles.css" rel="stylesheet" />
@@ -19,31 +19,26 @@
 	<!-- Выгрузка категорий товаров. -->
 	<div id="idPortfolioDop" class="col-lg-12 col-xs-12">
 		<div class="content">
-			<div class="col-lg-12 block-title-category mt-2 mb-2">
-				<h1 class="title-category">Корзина</h1>
-			</div>
-
 			@model IEnumerable<TextilWorld.Models.CategoryDetails>
 			@foreach (var item in Model) {
-				<div id="idImagesNotEffect" class="col-lg-3 col-xs-12">
-					<div class="block-images">
-						<img class="min-width-img" src="@Url.Content(item.ImagePath.Replace("wwwroot", "~"))" /> <br />
+				<div class="col-lg-12 block-title-category mt-2 mb-2">
+					<h1 class="title-category">@item.Details</h1>
+				</div>
 
-						<div class="details-text">
-							@item.Details
-						</div>
+				<div id="idImagesNotEffect" class="col-lg-3 col-xs-12">
+					<div>
+						<img src="@Url.Content(item.ImagePath.Replace("wwwroot", "~"))" /> <br />
 					</div>
 				</div>
 			}
-
 		</div>
-		<form asp-action="AddProductToShop" asp-controller="Product" class="form-product col-lg-3">
+		@*<form asp-action="AddProductToShop" asp-controller="Product" class="form-product col-lg-3">
 			<div class="form-group form-product-shop">
 				<input id="id-details" type="submit" value="Продолжить покупки" class="mr-5 continue idBtnDetailsProduct btn fancy btn-1 btn-sm btn-details text-center btn-product" />
 
 				<input id="id-details" type="submit" value="Оформить заказ" class="mr-5 idBtnDetailsProduct btn fancy btn-1 btn-sm btn-details text-center btn-product" />
 			</div>
-		</form>
+		</form>*@
 	</div>
 </body>
 </html>

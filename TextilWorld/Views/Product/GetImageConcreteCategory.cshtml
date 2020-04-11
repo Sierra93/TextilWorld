@@ -29,7 +29,9 @@
 			@foreach (var item in Model) {
 				<div id="idImagesNotEffect" class="col-lg-3 col-xs-12">
 					<div class="block-images">
-						<img class="min-width-img" src="@Url.Content(item.ImagePath.Replace("wwwroot", "~"))" /> <br />
+						<a href="@Url.Action("DisplayConcreateProduct", "Product", new { item.Id })" id="idLinkSite">
+							<img class="min-width-img" src="@Url.Content(item.ImagePath.Replace("wwwroot", "~"))" /> <br />
+						</a>						
 
 						<div class="details-text">
 							@item.Details
@@ -47,11 +49,11 @@
 
 								<span class="plus">+</span>
 							</div>
-						<form asp-action="AddProductToShop" asp-controller="Product" asp-route-id="@item.Id">
-							<div id="idBtnDetails" class="form-group">
-								<input id="id-details" type="submit" value="В корзину" class="btn fancy btn-1 btn-sm btn-details text-center" />
-							</div>
-						</form>
+							<form asp-action="AddProductToShop" asp-controller="Product" asp-route-id="@item.Id">
+								<div id="idBtnDetails" class="form-group">
+									<input id="id-details" type="submit" value="В корзину" class="btn fancy btn-1 btn-sm btn-details text-center" />
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>

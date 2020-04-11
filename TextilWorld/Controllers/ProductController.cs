@@ -41,20 +41,23 @@ namespace TextilWorld.Controllers {
             return View(oData);
         }
 
-        /// <summary>
-        /// Метод добавляет товар в корзину и переходит в корзину.
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
         public IActionResult AddProductToShop(int id) {
             if (id == 0) {
                 var data = db.CategoryesDetails.Where(p => p.isShop == "1");
                 return View(data);
             }
-            var changeProduct = db.CategoryesDetails.FirstOrDefault(l => l.Id == id);
-            changeProduct.isShop = "1";
-            db.SaveChangesAsync();
+            // TODO: доделать хранение в БД
+            var changeProduct = db.CategoryesDetails.Where(p => p.Id == id).ToList();
             return View(changeProduct);
+        }
+
+        /// <summary>
+        /// Метод выводит конкретный товар на страницу описания.
+        /// </summary>
+        /// <returns>Конкретный товар.</returns>
+        public IActionResult DisplayConcreateProduct(int id) {
+            var concreteProduct = db.CategoryesDetails.Where(p => p.Id == id).ToList();
+            return View(concreteProduct);
         }
     }
 }
