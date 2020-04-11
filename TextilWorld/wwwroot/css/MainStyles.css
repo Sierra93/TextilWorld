@@ -266,3 +266,8 @@ li {
   background: #fff !important;
   color: #6d6d6d !important;
 }
+.form-search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}

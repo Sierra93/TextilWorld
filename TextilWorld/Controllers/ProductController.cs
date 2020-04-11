@@ -59,5 +59,14 @@ namespace TextilWorld.Controllers {
             var concreteProduct = db.CategoryesDetails.Where(p => p.Id == id).ToList();
             return View(concreteProduct);
         }
+
+        /// <summary>
+        /// Метод ищет товар, который ввели в поле поиска.
+        /// </summary>
+        /// <returns>Список найденных товаров.</returns>
+        public IActionResult SearchIn(string search) {
+            var collectionSearch = db.CategoryesDetails.Where(p => p.Details.Contains(search)).ToList();
+            return View(collectionSearch);
+        }
     }
 }
