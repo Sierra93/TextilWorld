@@ -84,6 +84,7 @@ namespace TextilWorld.Controllers {
         /// Метод добавляет товар в избранное.
         /// </summary>
         /// <returns></returns>
+        /// // TODO: view еще не реализовано.
         public IActionResult AddProductToFavorites(int id) {
             CategoryDetails categoryDetails = new CategoryDetails();
             // Получает список товаров, которые находятся в избранном.
@@ -92,11 +93,30 @@ namespace TextilWorld.Controllers {
                 return View(listFavorites);
             }
 
-            // Добавляет товар в избранное.
+            // Добавляет товар в избранное.            
             var aFavorites = db.CategoryesDetails.Where(p => p.Id == id).ToList();
             categoryDetails.isFavorites = "1";
             db.SaveChanges();
             return View();
+        }
+
+        /// <summary>
+        /// Метод переходит на страницу оформления заказа.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public IActionResult DisplayToOrder(int id) {
+            // Выбирает товар, которым интересуемся из БД.
+            var product = db.CategoryesDetails.Where(p => p.Id == id).ToList();
+            return View(product);
+        }
+
+        /// <summary>
+        /// Метод переходит на главную страницу.
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult RouteToMain() {
+            return RedirectToAction("Start");
         }
     }
 }

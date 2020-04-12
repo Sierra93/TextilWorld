@@ -1,0 +1,64 @@
+﻿
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Оформление заказа</title>
+	<link href="~/css/HeaderStyles.css" rel="stylesheet" />
+	<link href="~/css/MainStyles.css" rel="stylesheet" />
+	<link href="~/css/FooterStyles.css" rel="stylesheet" />
+	<script src="~/lib/jquery/dist/jquery.js"></script>
+	<!-- Подключение фреймворка Vue -->
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+	<!-- Выгрузка категорий товаров. -->
+	<div id="idPortfolioDop" class="col-lg-12 col-xs-12">
+		<div class="content">
+			<div class="col-lg-12 block-title-category mt-2 mb-2">
+				<h1 class="title-category">Оформление заказа</h1>
+			</div>
+
+			@model IEnumerable<TextilWorld.Models.CategoryDetails>
+			@foreach (var item in Model) {
+				<div id="idImagesNotEffect" class="col-lg-3 col-xs-12">
+					<div class="block-images">
+						<img class="min-width-img" src="@Url.Content(item.ImagePath.Replace("wwwroot", "~"))" /> <br />
+
+						<div class="details-text">
+							@item.Details
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+
+		@foreach (var item in Model) {
+			<div class="form-group form-product-shop to-order">
+				<form class="form-order" asp-action="SendMessageToWhatsApp" asp-controller="Send" method="post" asp-all-route-data='new Dictionary<string,string> { {"Name", "name" }, { "Number", "number" }, { "Product", item.Details } }'>
+					<div class="form-group mr-2">
+						<input type="text" class="form-control" id="id-name" name="name" placeholder="Ваше имя">
+					</div>
+
+					<div class="form-group mr-2">
+						<input type="text" class="form-control" id="id-number" name="number" placeholder="Моб.телефон или email">
+					</div>
+
+					<div class="form-group mr-5">
+						<input type="text" class="form-control" id="id-comment" name="comment" placeholder="Комментарий к заказу">
+					</div>
+
+					<div class="form-group">
+						<input type="submit" class="form-control idBtnDetailsProduct btn fancy btn-1 btn-sm btn-details text-center btn-product" id="id-to-order">
+					</div>
+				</form>
+			</div>
+		}
+	</div>
+</body>
+</html>
+

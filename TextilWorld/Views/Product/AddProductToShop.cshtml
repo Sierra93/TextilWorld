@@ -25,25 +25,29 @@
 
 			@model IEnumerable<TextilWorld.Models.CategoryDetails>
 			@foreach (var item in Model) {
-				<div id="idImagesNotEffect" class="col-lg-3 col-xs-12">
-					<div class="block-images">
-						<img class="min-width-img" src="@Url.Content(item.ImagePath.Replace("wwwroot", "~"))" /> <br />
+			<div id="idImagesNotEffect" class="col-lg-3 col-xs-12">
+				<div class="block-images">
+					<img class="min-width-img" src="@Url.Content(item.ImagePath.Replace("wwwroot", "~"))" /> <br />
 
-						<div class="details-text">
-							@item.Details
-						</div>
+					<div class="details-text">
+						@item.Details
 					</div>
 				</div>
-			}
-
-		</div>
-		<form asp-action="AddProductToShop" asp-controller="Product" class="form-product col-lg-3">
-			<div class="form-group form-product-shop">
-				<input id="id-details" type="submit" value="Продолжить покупки" class="mr-5 continue idBtnDetailsProduct btn fancy btn-1 btn-sm btn-details text-center btn-product" />
-
-				<input id="id-details" type="submit" value="Оформить заказ" class="mr-5 idBtnDetailsProduct btn fancy btn-1 btn-sm btn-details text-center btn-product" />
 			</div>
-		</form>
+			}
+		</div>
+
+		@foreach (var item in Model) {
+		<div class="form-group form-product-shop">
+			<form class="form-product col-lg-3 mr-5" asp-action="RouteToMain" asp-controller="Product">
+				<input id="id-details" type="submit" value="Продолжить покупки" class="continue idBtnDetailsProduct btn fancy btn-1 btn-sm btn-details text-center btn-product" />
+			</form>
+
+			<form class="form-product col-lg-3 ml-5" asp-action="DisplayToOrder" asp-controller="Product" asp-route-id="@item.Id" method="get">
+				<input id="id-details" type="submit" value="Оформить заказ" class="idBtnDetailsProduct btn fancy btn-1 btn-sm btn-details text-center btn-product" />
+			</form>
+		</div>
+		}
 	</div>
 </body>
 </html>
