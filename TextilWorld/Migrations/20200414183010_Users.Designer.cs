@@ -9,7 +9,7 @@ using TextilWorld.Data;
 namespace TextilWorld.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200406174441_Users")]
+    [Migration("20200414183010_Users")]
     partial class Users
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -58,6 +58,12 @@ namespace TextilWorld.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("isFavorites")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("isShop")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

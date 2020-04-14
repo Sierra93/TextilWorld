@@ -19,11 +19,11 @@
 	<header class="header">
 		<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-2">
 			<div class="container-fluid">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+				@*<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
 						aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="navbar-collapse collapse d-sm-inline-flex">
+				</button>*@
+				@*<div class="navbar-collapse collapse d-sm-inline-flex">*@
 					<div class="col-lg-1">&nbsp;</div>
 
 					<ul class="navbar-nav flex-grow-1 col-lg-5">
@@ -46,7 +46,7 @@
 
 					<div class="col-lg-4">&nbsp;</div>
 
-					<ul class="navbar-nav flex-grow-1 col-lg-2">
+					<ul class="register navbar-nav flex-grow-1 col-lg-2">
 						<li class="nav-item">
 							<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Вход</a>
 						</li>
@@ -55,7 +55,7 @@
 							<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Регистрация</a>
 						</li>
 					</ul>
-				</div>
+				@*</div>*@
 			</div>
 		</nav>
 
@@ -91,36 +91,45 @@
 		</div>
 
 		<nav id="dop-header" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
-			<div class="container-fluid">
-				<ul class="after-nav navbar-nav flex-grow-1 col-lg-12">
-					<li class="nav-item">
-						<a class="nav-link text-dark" asp-controller="Product" asp-action="GetImageConcreteCategory" asp-route-id="1">Покрывала</a>
-					</li>
+			<span class="show-menu">Меню</span>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse1" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div id="bloci" class="container-fluid">
 
-					<li class="nav-item">
-						<a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Пледы</a>
-					</li>
+				<div class="navbar-collapse1 collapse d-sm-inline-flex">
 
-					<li class="nav-item">
-						<a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Чехлы на мягкую мебель</a>
-					</li>
+					<ul id="id-nav" class="after-nav navbar-nav flex-grow-1 col-lg-12">
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-controller="Product" asp-action="GetImageConcreteCategory" asp-route-id="1">Покрывала</a>
+						</li>
 
-					<li class="nav-item">
-						<a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Покрытия на диван</a>
-					</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Пледы</a>
+						</li>
 
-					<li class="nav-item">
-						<a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Накидки на диван</a>
-					</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Чехлы на мягкую мебель</a>
+						</li>
 
-					<li class="nav-item">
-						<a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Декоративные наволочки</a>
-					</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Покрытия на диван</a>
+						</li>
 
-					<li class="nav-item">
-						<a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Сидушки на стулья</a>
-					</li>
-				</ul>
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Накидки на диван</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Декоративные наволочки</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Сидушки на стулья</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 	</header>

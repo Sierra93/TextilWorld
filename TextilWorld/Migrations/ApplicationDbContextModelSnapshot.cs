@@ -58,6 +58,12 @@ namespace TextilWorld.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("isFavorites")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("isShop")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("CategoryesDetails");

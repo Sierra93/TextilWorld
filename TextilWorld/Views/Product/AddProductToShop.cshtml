@@ -39,11 +39,11 @@
 
 		@foreach (var item in Model) {
 		<div class="form-group form-product-shop">
-			<form class="form-product col-lg-3 mr-5" asp-action="RouteToMain" asp-controller="Product">
-				<input id="id-details" type="submit" value="Продолжить покупки" class="continue idBtnDetailsProduct btn fancy btn-1 btn-sm btn-details text-center btn-product" />
+			<form class="form-product col-lg-3" asp-action="RouteToMain" asp-controller="Product">
+				<input id="id-details" type="submit" value="Продолжить покупки" class="continue continue-mobile idBtnDetailsProduct btn fancy btn-1 btn-sm btn-details text-center btn-product" />
 			</form>
 
-			<form class="form-product col-lg-3 ml-5" asp-action="DisplayToOrder" asp-controller="Product" asp-route-id="@item.Id" method="get">
+			<form class="form-product col-lg-3" asp-action="DisplayToOrder" asp-controller="Product" asp-route-id="@item.Id" method="get">
 				<input id="id-details" type="submit" value="Оформить заказ" class="idBtnDetailsProduct btn fancy btn-1 btn-sm btn-details text-center btn-product" />
 			</form>
 		</div>

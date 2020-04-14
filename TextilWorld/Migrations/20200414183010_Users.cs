@@ -30,7 +30,9 @@ namespace TextilWorld.Migrations
                     Name = table.Column<string>(nullable: true),
                     ImagePath = table.Column<string>(nullable: true),
                     IdGroup = table.Column<int>(nullable: false),
-                    Details = table.Column<string>(nullable: true)
+                    Details = table.Column<string>(nullable: true),
+                    isShop = table.Column<string>(nullable: true),
+                    isFavorites = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

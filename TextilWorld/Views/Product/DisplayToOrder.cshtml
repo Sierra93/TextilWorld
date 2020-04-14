@@ -39,21 +39,23 @@
 
 		@foreach (var item in Model) {
 			<div class="form-group form-product-shop to-order">
-				<form class="form-order" asp-action="SendMessageToWhatsApp" asp-controller="Send" method="post" asp-all-route-data='new Dictionary<string,string> { {"Name", "name" }, { "Number", "number" }, { "Product", item.Details } }'>
-					<div class="form-group mr-2">
-						<input type="text" class="form-control" id="id-name" name="name" placeholder="Ваше имя">
-					</div>
+				<form class="form-order" asp-action="SendEmailMessage" asp-controller="Send" method="post" asp-all-route-data='new Dictionary<string,string> { {"Name", "name" }, { "Number", "number" }, { "Product", item.Details } }'>
+					<div class="block-order-forms">
+						<div class="form-group group col-xs-12">
+							<input type="text" class="form-control" id="id-name" name="name" placeholder="Ваше имя">
+						</div>
 
-					<div class="form-group mr-2">
-						<input type="text" class="form-control" id="id-number" name="number" placeholder="Моб.телефон или email">
-					</div>
+						<div class="form-group group col-xs-12">
+							<input type="text" class="form-control" id="id-number" name="number" placeholder="Моб.телефон или email">
+						</div>
 
-					<div class="form-group mr-5">
-						<input type="text" class="form-control" id="id-comment" name="comment" placeholder="Комментарий к заказу">
-					</div>
+						<div class="form-group group col-xs-12">
+							<input type="text" class="form-control comment-mobile" id="id-comment" name="comment" placeholder="Комментарий к заказу">
+						</div>
 
-					<div class="form-group">
-						<input type="submit" class="form-control idBtnDetailsProduct btn fancy btn-1 btn-sm btn-details text-center btn-product" id="id-to-order">
+						<div class="form-group group col-xs-12">
+							<input type="submit" class="form-control idBtnDetailsProduct btn fancy btn-1 btn-sm btn-details text-center btn-product" id="id-to-order">
+						</div>
 					</div>
 				</form>
 			</div>

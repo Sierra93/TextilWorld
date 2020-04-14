@@ -54,6 +54,7 @@ li {
 // Для категорий работ
 .details-text {
     text-align: center;
+    //width: 180px;
 }
 
 .block {
@@ -107,7 +108,7 @@ li {
 #idImagesNotEffect {
     position: relative;
     width: 300px;
-    margin-left: -40px;
+    //margin-left: -40px;
     height: 340px;
 
     &:hover {
@@ -124,8 +125,10 @@ li {
 }
 
 .content {
-    display: flex;
     flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    //margin-left: 15%;
 }
 
 #idPortfolio {
@@ -134,8 +137,8 @@ li {
 }
 
 #idPortfolioDop {
-    margin-left: 13%;
-    margin-right: 13%;
+    //margin-left: 13%;
+    //margin-right: 13%;
 }
 
 .form {
@@ -163,13 +166,13 @@ li {
 }
 
 .block-title-category {
-    margin-left: -3%;
-    padding-right: 20%;
+    //margin-left: -3%;
+    //padding-right: 20%;
 }
 
-.details-text {
+/*.details-text {
     width: 180px;
-}
+}*/
 
 .block-images {
     color: #d346ad;
@@ -215,6 +218,7 @@ li {
     #id-details {
         color: #FFF;
         text-transform: uppercase;
+        //margin-right: 400px;
 
         &:hover {
             background: #bf93b2;
@@ -228,6 +232,7 @@ li {
 .block-images:hover #id-details-block {
     display: flex;
     justify-content: space-around;
+    z-index: 5;
 }
 .text {
     width: 19px;
@@ -280,11 +285,12 @@ li {
 .form-product {
     border-color: #bf93b2;
     color: #d346ad;
+    //margin-right: 70px;
 }
 .idBtnDetailsProduct {
     border: 1px solid;
-    margin-left: -40px;
-    width: 170px;
+    //margin-left: -40px;
+    //width: 170px;
     display: flex;
     justify-content: center;
 
@@ -308,7 +314,16 @@ li {
 }
 .form-product-shop {
     display: flex;
-    float: left;
+    justify-content: center;
+    /*float: left;
+    margin-right: 100px;*/
+    //margin-left: 15%;
+}
+.block-order-forms {
+    display: flex;
+}
+.group {
+    margin: 0 5px 0 5px;
 }
 .continue {
     color: #6d6d6d;
@@ -326,8 +341,180 @@ li {
     align-items: center;
 }
 .to-order {
-    margin-left: -40px;
+    //margin-left: -40px;
 }
 .form-order {
     display: flex;
+}
+.show-menu {
+    display: none;
+}
+#bloci {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.block-preim {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.mobile {
+    padding: 10px;
+    font-size: 11px;
+}
+.title-category {
+    font-weight: 600;
+    font-size: 36px;
+     border-bottom: none; 
+}
+/* Стили для адаптивности */
+/* xs (<=543px) */
+@media (max-width: 575px) {
+    #app {
+        margin: 0 10px 0 10px;
+    }
+    .after-nav {
+        background: #d757b5 !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #id-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #id-details {
+        font-size: 10px;
+    }
+    .nav-link {
+        font-size: 8px !important;
+    }
+
+    .col-lg-1 {
+        display: none;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .block-search {
+        display: none;
+    }
+    .mobile-title {
+        font-size: 17px;
+    }
+
+    .register {
+        display: none;
+    }
+
+    #bloci {
+        display: flex;
+        justify-content: center;
+    }
+
+    .show-menu {
+        display: block;
+    }
+    .title-category {
+        font-weight: 600;
+        font-size: 18px;
+        border-bottom: none;
+    }
+    .content {
+        display: flex;
+        justify-content: center;
+    }
+    .main-mobile {
+        display: flex;
+        justify-content: center;
+    }
+    #app {
+        overflow-x: hidden;
+    }
+    .form-product-shop {
+        display: flex;
+        justify-content: center;
+        float: left;
+        //margin-left: -8%;
+    }
+    .form-order {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        align-items: center;
+        margin-left: 40px;
+    }
+    .comment-mobile {
+        margin-right: 1% !important;
+    }
+    #idPortfolioDop {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .continue-mobile {
+        //margin-left: 10px;
+    }    
+    .min-width-img {
+         //width: 180px; 
+         //height: 170px; 
+    }
+    #idImagesNotEffect {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        //width: 300px;
+        //margin-left: -40px;
+        height: 340px;
+    }
+    /*#idPortfolio {
+        margin-right: 7%;
+    }*/
+    .form-product {
+        border-color: #bf93b2;
+        color: #d346ad;
+        /* margin-right: 70px; */
+    }
+    .idBtnDetailsProduct {
+        border: 1px solid;
+        //margin-left: -90px;
+        /* width: 170px; */
+        display: flex;
+        justify-content: center;
+    }
+    .details-text {
+        text-align: center;
+        //width: 180px;
+    }
+    .block-images {
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+    }
+    .navbar-collapse1 {
+        width: 100%;
+        z-index: 1;
+    }
+    .block-order-forms {
+        display: block;
+    }
+    .group {
+        margin: 5px 0 5px 0;
+    }
+}
+
+/* md (>=768 и <=991) */
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
+/* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    
 }

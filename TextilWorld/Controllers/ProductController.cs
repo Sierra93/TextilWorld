@@ -35,9 +35,8 @@ namespace TextilWorld.Controllers {
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet]
-        public IActionResult GetImageConcreteCategory(string id) {
-            var oData = GetImageConcreteCategoryService.GetImagesConcrete(id); 
+        public IActionResult GetImageConcreteCategory(int id) {
+            var oData = db.CategoryesDetails.Where(p => p.IdGroup == id).ToList();
             return View(oData);
         }
 
